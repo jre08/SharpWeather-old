@@ -91,6 +91,44 @@ partial class MainForm : System.Windows.Forms.Form
 		this.Button2 = new System.Windows.Forms.Button();
 		this.label1 = new System.Windows.Forms.Label();
 		this.button3 = new System.Windows.Forms.Button();
+		this.tabPage4 = new System.Windows.Forms.TabPage();
+		this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+		this.panel5 = new System.Windows.Forms.Panel();
+		this.pictureBox1 = new System.Windows.Forms.PictureBox();
+		this.pictureBox2 = new System.Windows.Forms.PictureBox();
+		this.label2 = new System.Windows.Forms.Label();
+		this.label3 = new System.Windows.Forms.Label();
+		this.label4 = new System.Windows.Forms.Label();
+		this.label5 = new System.Windows.Forms.Label();
+		this.label6 = new System.Windows.Forms.Label();
+		this.label7 = new System.Windows.Forms.Label();
+		this.panel6 = new System.Windows.Forms.Panel();
+		this.pictureBox3 = new System.Windows.Forms.PictureBox();
+		this.pictureBox5 = new System.Windows.Forms.PictureBox();
+		this.label8 = new System.Windows.Forms.Label();
+		this.label9 = new System.Windows.Forms.Label();
+		this.label10 = new System.Windows.Forms.Label();
+		this.label11 = new System.Windows.Forms.Label();
+		this.label12 = new System.Windows.Forms.Label();
+		this.label13 = new System.Windows.Forms.Label();
+		this.panel7 = new System.Windows.Forms.Panel();
+		this.pictureBox6 = new System.Windows.Forms.PictureBox();
+		this.pictureBox7 = new System.Windows.Forms.PictureBox();
+		this.label14 = new System.Windows.Forms.Label();
+		this.label15 = new System.Windows.Forms.Label();
+		this.label16 = new System.Windows.Forms.Label();
+		this.label17 = new System.Windows.Forms.Label();
+		this.label18 = new System.Windows.Forms.Label();
+		this.label19 = new System.Windows.Forms.Label();
+		this.panel8 = new System.Windows.Forms.Panel();
+		this.pictureBox8 = new System.Windows.Forms.PictureBox();
+		this.pictureBox9 = new System.Windows.Forms.PictureBox();
+		this.label20 = new System.Windows.Forms.Label();
+		this.label21 = new System.Windows.Forms.Label();
+		this.label22 = new System.Windows.Forms.Label();
+		this.label23 = new System.Windows.Forms.Label();
+		this.label24 = new System.Windows.Forms.Label();
+		this.label25 = new System.Windows.Forms.Label();
 		this.panel1.SuspendLayout();
 		((System.ComponentModel.ISupportInitialize)(this.picboxN1)).BeginInit();
 		((System.ComponentModel.ISupportInitialize)(this.picboxD1)).BeginInit();
@@ -109,6 +147,20 @@ partial class MainForm : System.Windows.Forms.Form
 		this.tabPage1.SuspendLayout();
 		this.TabPage3.SuspendLayout();
 		this.tabPage2.SuspendLayout();
+		this.tabPage4.SuspendLayout();
+		this.flowLayoutPanel2.SuspendLayout();
+		this.panel5.SuspendLayout();
+		((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+		((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+		this.panel6.SuspendLayout();
+		((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+		((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+		this.panel7.SuspendLayout();
+		((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+		((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+		this.panel8.SuspendLayout();
+		((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+		((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
 		this.SuspendLayout();
 		// 
 		// panel1
@@ -210,7 +262,7 @@ partial class MainForm : System.Windows.Forms.Form
 		this.flowLayoutPanel1.Controls.Add(this.Panel4);
 		this.flowLayoutPanel1.Location = new System.Drawing.Point(15, 6);
 		this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-		this.flowLayoutPanel1.Size = new System.Drawing.Size(316, 479);
+		this.flowLayoutPanel1.Size = new System.Drawing.Size(316, 477);
 		this.flowLayoutPanel1.TabIndex = 2;
 		// 
 		// Panel2
@@ -481,7 +533,7 @@ partial class MainForm : System.Windows.Forms.Form
 			| System.Windows.Forms.AnchorStyles.Right)));
 		this.pictureBox4.Location = new System.Drawing.Point(337, 9);
 		this.pictureBox4.Name = "pictureBox4";
-		this.pictureBox4.Size = new System.Drawing.Size(656, 476);
+		this.pictureBox4.Size = new System.Drawing.Size(672, 474);
 		this.pictureBox4.TabIndex = 1;
 		this.pictureBox4.TabStop = false;
 		// 
@@ -504,10 +556,11 @@ partial class MainForm : System.Windows.Forms.Form
 		this.tabControl1.Controls.Add(this.tabPage1);
 		this.tabControl1.Controls.Add(this.TabPage3);
 		this.tabControl1.Controls.Add(this.tabPage2);
+		this.tabControl1.Controls.Add(this.tabPage4);
 		this.tabControl1.Location = new System.Drawing.Point(12, 12);
 		this.tabControl1.Name = "tabControl1";
 		this.tabControl1.SelectedIndex = 0;
-		this.tabControl1.Size = new System.Drawing.Size(1007, 527);
+		this.tabControl1.Size = new System.Drawing.Size(1023, 525);
 		this.tabControl1.TabIndex = 4;
 		// 
 		// tabPage1
@@ -517,7 +570,7 @@ partial class MainForm : System.Windows.Forms.Form
 		this.tabPage1.Location = new System.Drawing.Point(4, 22);
 		this.tabPage1.Name = "tabPage1";
 		this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-		this.tabPage1.Size = new System.Drawing.Size(999, 501);
+		this.tabPage1.Size = new System.Drawing.Size(1015, 499);
 		this.tabPage1.TabIndex = 0;
 		this.tabPage1.Text = "4 Day Forecast";
 		this.tabPage1.UseVisualStyleBackColor = true;
@@ -589,7 +642,7 @@ partial class MainForm : System.Windows.Forms.Form
 		// 
 		// label1
 		// 
-		this.label1.Location = new System.Drawing.Point(188, 538);
+		this.label1.Location = new System.Drawing.Point(188, 541);
 		this.label1.Name = "label1";
 		this.label1.Size = new System.Drawing.Size(827, 23);
 		this.label1.TabIndex = 6;
@@ -597,13 +650,385 @@ partial class MainForm : System.Windows.Forms.Form
 		// 
 		// button3
 		// 
-		this.button3.Location = new System.Drawing.Point(315, 3);
+		this.button3.Location = new System.Drawing.Point(657, 3);
 		this.button3.Name = "button3";
-		this.button3.Size = new System.Drawing.Size(69, 31);
+		this.button3.Size = new System.Drawing.Size(69, 25);
 		this.button3.TabIndex = 7;
 		this.button3.Text = "button3";
 		this.button3.UseVisualStyleBackColor = true;
 		this.button3.Click += new System.EventHandler(this.Button3Click);
+		// 
+		// tabPage4
+		// 
+		this.tabPage4.Controls.Add(this.flowLayoutPanel2);
+		this.tabPage4.Location = new System.Drawing.Point(4, 22);
+		this.tabPage4.Name = "tabPage4";
+		this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+		this.tabPage4.Size = new System.Drawing.Size(1015, 499);
+		this.tabPage4.TabIndex = 3;
+		this.tabPage4.Text = "tabPage4";
+		this.tabPage4.UseVisualStyleBackColor = true;
+		// 
+		// flowLayoutPanel2
+		// 
+		this.flowLayoutPanel2.AutoScroll = true;
+		this.flowLayoutPanel2.Controls.Add(this.panel5);
+		this.flowLayoutPanel2.Controls.Add(this.panel6);
+		this.flowLayoutPanel2.Controls.Add(this.panel7);
+		this.flowLayoutPanel2.Controls.Add(this.panel8);
+		this.flowLayoutPanel2.Location = new System.Drawing.Point(6, 6);
+		this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+		this.flowLayoutPanel2.Size = new System.Drawing.Size(997, 401);
+		this.flowLayoutPanel2.TabIndex = 0;
+		this.flowLayoutPanel2.WrapContents = false;
+		// 
+		// panel5
+		// 
+		this.panel5.AutoScroll = true;
+		this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+		this.panel5.Controls.Add(this.pictureBox1);
+		this.panel5.Controls.Add(this.pictureBox2);
+		this.panel5.Controls.Add(this.label2);
+		this.panel5.Controls.Add(this.label3);
+		this.panel5.Controls.Add(this.label4);
+		this.panel5.Controls.Add(this.label5);
+		this.panel5.Controls.Add(this.label6);
+		this.panel5.Controls.Add(this.label7);
+		this.panel5.Location = new System.Drawing.Point(3, 3);
+		this.panel5.Name = "panel5";
+		this.panel5.Size = new System.Drawing.Size(289, 372);
+		this.panel5.TabIndex = 2;
+		// 
+		// pictureBox1
+		// 
+		this.pictureBox1.Location = new System.Drawing.Point(3, 221);
+		this.pictureBox1.Name = "pictureBox1";
+		this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+		this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+		this.pictureBox1.TabIndex = 1;
+		this.pictureBox1.TabStop = false;
+		// 
+		// pictureBox2
+		// 
+		this.pictureBox2.Location = new System.Drawing.Point(3, 28);
+		this.pictureBox2.Name = "pictureBox2";
+		this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+		this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+		this.pictureBox2.TabIndex = 1;
+		this.pictureBox2.TabStop = false;
+		// 
+		// label2
+		// 
+		this.label2.AutoSize = true;
+		this.label2.Location = new System.Drawing.Point(0, 330);
+		this.label2.Name = "label2";
+		this.label2.Size = new System.Drawing.Size(124, 13);
+		this.label2.TabIndex = 0;
+		this.label2.Text = "Chance of Precepitation:";
+		// 
+		// label3
+		// 
+		this.label3.AutoSize = true;
+		this.label3.Location = new System.Drawing.Point(3, 137);
+		this.label3.Name = "label3";
+		this.label3.Size = new System.Drawing.Size(124, 13);
+		this.label3.TabIndex = 0;
+		this.label3.Text = "Chance of Precepitation:";
+		// 
+		// label4
+		// 
+		this.label4.Location = new System.Drawing.Point(0, 274);
+		this.label4.Name = "label4";
+		this.label4.Size = new System.Drawing.Size(173, 56);
+		this.label4.TabIndex = 0;
+		this.label4.Text = "Night one Desc.";
+		// 
+		// label5
+		// 
+		this.label5.Location = new System.Drawing.Point(3, 0);
+		this.label5.Name = "label5";
+		this.label5.Size = new System.Drawing.Size(173, 56);
+		this.label5.TabIndex = 0;
+		this.label5.Text = "Day one Desc.";
+		// 
+		// label6
+		// 
+		this.label6.AutoSize = true;
+		this.label6.Location = new System.Drawing.Point(3, 205);
+		this.label6.Name = "label6";
+		this.label6.Size = new System.Drawing.Size(38, 13);
+		this.label6.TabIndex = 0;
+		this.label6.Text = "Night1";
+		// 
+		// label7
+		// 
+		this.label7.AutoSize = true;
+		this.label7.Location = new System.Drawing.Point(3, 12);
+		this.label7.Name = "label7";
+		this.label7.Size = new System.Drawing.Size(32, 13);
+		this.label7.TabIndex = 0;
+		this.label7.Text = "Day1";
+		// 
+		// panel6
+		// 
+		this.panel6.AutoScroll = true;
+		this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+		this.panel6.Controls.Add(this.pictureBox3);
+		this.panel6.Controls.Add(this.pictureBox5);
+		this.panel6.Controls.Add(this.label8);
+		this.panel6.Controls.Add(this.label9);
+		this.panel6.Controls.Add(this.label10);
+		this.panel6.Controls.Add(this.label11);
+		this.panel6.Controls.Add(this.label12);
+		this.panel6.Controls.Add(this.label13);
+		this.panel6.Location = new System.Drawing.Point(298, 3);
+		this.panel6.Name = "panel6";
+		this.panel6.Size = new System.Drawing.Size(289, 372);
+		this.panel6.TabIndex = 3;
+		// 
+		// pictureBox3
+		// 
+		this.pictureBox3.Location = new System.Drawing.Point(3, 221);
+		this.pictureBox3.Name = "pictureBox3";
+		this.pictureBox3.Size = new System.Drawing.Size(100, 50);
+		this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+		this.pictureBox3.TabIndex = 1;
+		this.pictureBox3.TabStop = false;
+		// 
+		// pictureBox5
+		// 
+		this.pictureBox5.Location = new System.Drawing.Point(3, 28);
+		this.pictureBox5.Name = "pictureBox5";
+		this.pictureBox5.Size = new System.Drawing.Size(100, 50);
+		this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+		this.pictureBox5.TabIndex = 1;
+		this.pictureBox5.TabStop = false;
+		// 
+		// label8
+		// 
+		this.label8.AutoSize = true;
+		this.label8.Location = new System.Drawing.Point(0, 330);
+		this.label8.Name = "label8";
+		this.label8.Size = new System.Drawing.Size(124, 13);
+		this.label8.TabIndex = 0;
+		this.label8.Text = "Chance of Precepitation:";
+		// 
+		// label9
+		// 
+		this.label9.AutoSize = true;
+		this.label9.Location = new System.Drawing.Point(3, 137);
+		this.label9.Name = "label9";
+		this.label9.Size = new System.Drawing.Size(124, 13);
+		this.label9.TabIndex = 0;
+		this.label9.Text = "Chance of Precepitation:";
+		// 
+		// label10
+		// 
+		this.label10.Location = new System.Drawing.Point(0, 274);
+		this.label10.Name = "label10";
+		this.label10.Size = new System.Drawing.Size(173, 56);
+		this.label10.TabIndex = 0;
+		this.label10.Text = "Night one Desc.";
+		// 
+		// label11
+		// 
+		this.label11.Location = new System.Drawing.Point(3, 0);
+		this.label11.Name = "label11";
+		this.label11.Size = new System.Drawing.Size(173, 56);
+		this.label11.TabIndex = 0;
+		this.label11.Text = "Day one Desc.";
+		// 
+		// label12
+		// 
+		this.label12.AutoSize = true;
+		this.label12.Location = new System.Drawing.Point(3, 205);
+		this.label12.Name = "label12";
+		this.label12.Size = new System.Drawing.Size(38, 13);
+		this.label12.TabIndex = 0;
+		this.label12.Text = "Night1";
+		// 
+		// label13
+		// 
+		this.label13.AutoSize = true;
+		this.label13.Location = new System.Drawing.Point(3, 12);
+		this.label13.Name = "label13";
+		this.label13.Size = new System.Drawing.Size(32, 13);
+		this.label13.TabIndex = 0;
+		this.label13.Text = "Day1";
+		// 
+		// panel7
+		// 
+		this.panel7.AutoScroll = true;
+		this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+		this.panel7.Controls.Add(this.pictureBox6);
+		this.panel7.Controls.Add(this.pictureBox7);
+		this.panel7.Controls.Add(this.label14);
+		this.panel7.Controls.Add(this.label15);
+		this.panel7.Controls.Add(this.label16);
+		this.panel7.Controls.Add(this.label17);
+		this.panel7.Controls.Add(this.label18);
+		this.panel7.Controls.Add(this.label19);
+		this.panel7.Location = new System.Drawing.Point(593, 3);
+		this.panel7.Name = "panel7";
+		this.panel7.Size = new System.Drawing.Size(289, 372);
+		this.panel7.TabIndex = 4;
+		// 
+		// pictureBox6
+		// 
+		this.pictureBox6.Location = new System.Drawing.Point(3, 221);
+		this.pictureBox6.Name = "pictureBox6";
+		this.pictureBox6.Size = new System.Drawing.Size(100, 50);
+		this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+		this.pictureBox6.TabIndex = 1;
+		this.pictureBox6.TabStop = false;
+		// 
+		// pictureBox7
+		// 
+		this.pictureBox7.Location = new System.Drawing.Point(3, 28);
+		this.pictureBox7.Name = "pictureBox7";
+		this.pictureBox7.Size = new System.Drawing.Size(100, 50);
+		this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+		this.pictureBox7.TabIndex = 1;
+		this.pictureBox7.TabStop = false;
+		// 
+		// label14
+		// 
+		this.label14.AutoSize = true;
+		this.label14.Location = new System.Drawing.Point(0, 330);
+		this.label14.Name = "label14";
+		this.label14.Size = new System.Drawing.Size(124, 13);
+		this.label14.TabIndex = 0;
+		this.label14.Text = "Chance of Precepitation:";
+		// 
+		// label15
+		// 
+		this.label15.AutoSize = true;
+		this.label15.Location = new System.Drawing.Point(3, 137);
+		this.label15.Name = "label15";
+		this.label15.Size = new System.Drawing.Size(124, 13);
+		this.label15.TabIndex = 0;
+		this.label15.Text = "Chance of Precepitation:";
+		// 
+		// label16
+		// 
+		this.label16.Location = new System.Drawing.Point(0, 274);
+		this.label16.Name = "label16";
+		this.label16.Size = new System.Drawing.Size(173, 56);
+		this.label16.TabIndex = 0;
+		this.label16.Text = "Night one Desc.";
+		// 
+		// label17
+		// 
+		this.label17.Location = new System.Drawing.Point(3, 0);
+		this.label17.Name = "label17";
+		this.label17.Size = new System.Drawing.Size(173, 56);
+		this.label17.TabIndex = 0;
+		this.label17.Text = "Day one Desc.";
+		// 
+		// label18
+		// 
+		this.label18.AutoSize = true;
+		this.label18.Location = new System.Drawing.Point(3, 205);
+		this.label18.Name = "label18";
+		this.label18.Size = new System.Drawing.Size(38, 13);
+		this.label18.TabIndex = 0;
+		this.label18.Text = "Night1";
+		// 
+		// label19
+		// 
+		this.label19.AutoSize = true;
+		this.label19.Location = new System.Drawing.Point(3, 12);
+		this.label19.Name = "label19";
+		this.label19.Size = new System.Drawing.Size(32, 13);
+		this.label19.TabIndex = 0;
+		this.label19.Text = "Day1";
+		// 
+		// panel8
+		// 
+		this.panel8.AutoScroll = true;
+		this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+		this.panel8.Controls.Add(this.pictureBox8);
+		this.panel8.Controls.Add(this.pictureBox9);
+		this.panel8.Controls.Add(this.label20);
+		this.panel8.Controls.Add(this.label21);
+		this.panel8.Controls.Add(this.label22);
+		this.panel8.Controls.Add(this.label23);
+		this.panel8.Controls.Add(this.label24);
+		this.panel8.Controls.Add(this.label25);
+		this.panel8.Location = new System.Drawing.Point(888, 3);
+		this.panel8.Name = "panel8";
+		this.panel8.Size = new System.Drawing.Size(289, 372);
+		this.panel8.TabIndex = 5;
+		// 
+		// pictureBox8
+		// 
+		this.pictureBox8.Location = new System.Drawing.Point(3, 221);
+		this.pictureBox8.Name = "pictureBox8";
+		this.pictureBox8.Size = new System.Drawing.Size(100, 50);
+		this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+		this.pictureBox8.TabIndex = 1;
+		this.pictureBox8.TabStop = false;
+		// 
+		// pictureBox9
+		// 
+		this.pictureBox9.Location = new System.Drawing.Point(3, 28);
+		this.pictureBox9.Name = "pictureBox9";
+		this.pictureBox9.Size = new System.Drawing.Size(100, 50);
+		this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+		this.pictureBox9.TabIndex = 1;
+		this.pictureBox9.TabStop = false;
+		// 
+		// label20
+		// 
+		this.label20.AutoSize = true;
+		this.label20.Location = new System.Drawing.Point(0, 330);
+		this.label20.Name = "label20";
+		this.label20.Size = new System.Drawing.Size(124, 13);
+		this.label20.TabIndex = 0;
+		this.label20.Text = "Chance of Precepitation:";
+		// 
+		// label21
+		// 
+		this.label21.AutoSize = true;
+		this.label21.Location = new System.Drawing.Point(3, 137);
+		this.label21.Name = "label21";
+		this.label21.Size = new System.Drawing.Size(124, 13);
+		this.label21.TabIndex = 0;
+		this.label21.Text = "Chance of Precepitation:";
+		// 
+		// label22
+		// 
+		this.label22.Location = new System.Drawing.Point(0, 274);
+		this.label22.Name = "label22";
+		this.label22.Size = new System.Drawing.Size(173, 56);
+		this.label22.TabIndex = 0;
+		this.label22.Text = "Night one Desc.";
+		// 
+		// label23
+		// 
+		this.label23.Location = new System.Drawing.Point(3, 0);
+		this.label23.Name = "label23";
+		this.label23.Size = new System.Drawing.Size(173, 56);
+		this.label23.TabIndex = 0;
+		this.label23.Text = "Day one Desc.";
+		// 
+		// label24
+		// 
+		this.label24.AutoSize = true;
+		this.label24.Location = new System.Drawing.Point(3, 205);
+		this.label24.Name = "label24";
+		this.label24.Size = new System.Drawing.Size(38, 13);
+		this.label24.TabIndex = 0;
+		this.label24.Text = "Night1";
+		// 
+		// label25
+		// 
+		this.label25.AutoSize = true;
+		this.label25.Location = new System.Drawing.Point(3, 12);
+		this.label25.Name = "label25";
+		this.label25.Size = new System.Drawing.Size(32, 13);
+		this.label25.TabIndex = 0;
+		this.label25.Text = "Day1";
 		// 
 		// MainForm
 		// 
@@ -641,6 +1066,24 @@ partial class MainForm : System.Windows.Forms.Form
 		this.tabPage1.ResumeLayout(false);
 		this.TabPage3.ResumeLayout(false);
 		this.tabPage2.ResumeLayout(false);
+		this.tabPage4.ResumeLayout(false);
+		this.flowLayoutPanel2.ResumeLayout(false);
+		this.panel5.ResumeLayout(false);
+		this.panel5.PerformLayout();
+		((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+		((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+		this.panel6.ResumeLayout(false);
+		this.panel6.PerformLayout();
+		((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+		((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+		this.panel7.ResumeLayout(false);
+		this.panel7.PerformLayout();
+		((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+		((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+		this.panel8.ResumeLayout(false);
+		this.panel8.PerformLayout();
+		((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+		((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
 		this.ResumeLayout(false);
 
 	}
@@ -692,6 +1135,44 @@ partial class MainForm : System.Windows.Forms.Form
 	private GMap.NET.WindowsForms.GMapControl gMapControl;
 	private System.Windows.Forms.Label label1;
 	private System.Windows.Forms.Button button3;
+	private System.Windows.Forms.TabPage tabPage4;
+	private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+	private System.Windows.Forms.Panel panel5;
+	private System.Windows.Forms.PictureBox pictureBox1;
+	private System.Windows.Forms.PictureBox pictureBox2;
+	private System.Windows.Forms.Label label2;
+	private System.Windows.Forms.Label label3;
+	private System.Windows.Forms.Label label4;
+	private System.Windows.Forms.Label label5;
+	private System.Windows.Forms.Label label6;
+	private System.Windows.Forms.Label label7;
+	private System.Windows.Forms.Panel panel6;
+	private System.Windows.Forms.PictureBox pictureBox3;
+	private System.Windows.Forms.PictureBox pictureBox5;
+	private System.Windows.Forms.Label label8;
+	private System.Windows.Forms.Label label9;
+	private System.Windows.Forms.Label label10;
+	private System.Windows.Forms.Label label11;
+	private System.Windows.Forms.Label label12;
+	private System.Windows.Forms.Label label13;
+	private System.Windows.Forms.Panel panel7;
+	private System.Windows.Forms.PictureBox pictureBox6;
+	private System.Windows.Forms.PictureBox pictureBox7;
+	private System.Windows.Forms.Label label14;
+	private System.Windows.Forms.Label label15;
+	private System.Windows.Forms.Label label16;
+	private System.Windows.Forms.Label label17;
+	private System.Windows.Forms.Label label18;
+	private System.Windows.Forms.Label label19;
+	private System.Windows.Forms.Panel panel8;
+	private System.Windows.Forms.PictureBox pictureBox8;
+	private System.Windows.Forms.PictureBox pictureBox9;
+	private System.Windows.Forms.Label label20;
+	private System.Windows.Forms.Label label21;
+	private System.Windows.Forms.Label label22;
+	private System.Windows.Forms.Label label23;
+	private System.Windows.Forms.Label label24;
+	private System.Windows.Forms.Label label25;
 }
 
 //=======================================================
