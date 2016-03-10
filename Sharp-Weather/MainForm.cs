@@ -34,6 +34,13 @@ using System.Xml.Linq;
 using System.Net;
 using System.Xml;
 
+internal static class Globals   
+{   
+    public static string textjson = "";   
+       
+}  
+
+
 public partial class MainForm
 {
 	string text2;
@@ -41,12 +48,13 @@ public partial class MainForm
 	string labeltxt;
 	string periodtxt;
 	string icontxt;
-
+	static string textjson;
 	public MainForm()
 	{
 		//SizeChanged += Redrawmap;
 		// The Me.InitializeComponent call is required for Windows Forms designer support.
 		this.InitializeComponent();
+		readJson();
 		Map();
 		Forecast4day();
 
@@ -54,8 +62,8 @@ public partial class MainForm
 
 	public void Redrawmap()
 	{
-		int iwidth = pictureBox4.Size.Width;
-		int iheight = pictureBox4.Size.Height;
+		//int iwidth = pictureBox4.Size.Width;
+		//int iheight = pictureBox4.Size.Height;
 		int bwidth = WEBmapbrowser.Size.Width;
 		int bheight = WEBmapbrowser.Size.Height;
 
@@ -65,21 +73,84 @@ public partial class MainForm
 		//MsgBox("width = " & iwidth & ", height = " & iheight)
 
 
-		dynamic yURl = "http://api.wunderground.com/api/8390d409d9f2d532/animatedradar/q/FL/Tallahassee.swf?newmaps=1&timelabel=1&timelabel.y=10&num=15&delay=50&width=" + bwidth + "&height=" + bheight;
-		WEBmapbrowser.Url = new Uri(yURl);
-		pictureBox4.Load("http://api.wunderground.com/api/8390d409d9f2d532/animatedradar/q/FL/Tallahassee.gif?newmaps=1&timelabel=1&timelabel.y=10&num=15&delay=50&width=" + iwidth + "&height=" + iheight);
+		//dynamic yURl = "http://api.wunderground.com/api/8390d409d9f2d532/animatedradar/q/FL/Tallahassee.swf?newmaps=1&timelabel=1&timelabel.y=10&num=15&delay=50&width=" + bwidth + "&height=" + bheight;
+		//WEBmapbrowser.Url = new Uri(yURl);
+		//pictureBox4.Load("http://api.wunderground.com/api/8390d409d9f2d532/animatedradar/q/FL/Tallahassee.gif?newmaps=1&timelabel=1&timelabel.y=10&num=15&delay=50&width=" + iwidth + "&height=" + iheight);
 	}
 
 	public void Map()
 	{
-		dynamic yURl = "http://api.wunderground.com/api/8390d409d9f2d532/animatedradar/q/FL/Tallahassee.swf?newmaps=1&timelabel=1&timelabel.y=10&num=15&delay=50&width=900&height=400";
-		WEBmapbrowser.Url = new Uri(yURl);
-		pictureBox4.Load("http://api.wunderground.com/api/8390d409d9f2d532/animatedradar/q/FL/Tallahassee.gif?newmaps=1&timelabel=1&timelabel.y=10&num=15&delay=50&width=600&height=400");
+		//dynamic yURl = "http://api.wunderground.com/api/8390d409d9f2d532/animatedradar/q/FL/Tallahassee.swf?newmaps=1&timelabel=1&timelabel.y=10&num=15&delay=50&width=900&height=400";
+		//WEBmapbrowser.Url = new Uri(yURl);
+		//pictureBox4.Load("http://api.wunderground.com/api/8390d409d9f2d532/animatedradar/q/FL/Tallahassee.gif?newmaps=1&timelabel=1&timelabel.y=10&num=15&delay=50&width=600&height=400");
 	}
 
 
 	public void Forecast4day()
-	{
+	{	
+		//JObject o = JObject.Parse(textjson);
+		forecast4 weather = new forecast4();
+		//Debug.Print(weather.readJson("icon_url"));
+		string picpath = null;
+		
+		
+		picpath = weather.readJson(0,"icon_url");
+		picboxD1.Load(picpath);
+		lblD1.Text = weather.readJson(0,"title");
+		//lblD1desc.Text = weather.readJson(0,"fcttext");
+		lblD1pop.Text = "Chance of precipitation: " + weather.readJson(0,"pop");
+		
+		picpath = weather.readJson(1,"icon_url");
+		picboxN1.Load(picpath);
+		lblN1.Text = weather.readJson(1,"title");
+		//lblN1desc.Text = weather.readJson(1,"fcttext");
+		lblN1pop.Text = "Chance of precipitation: " + weather.readJson(1,"pop");
+		
+		
+		picpath = weather.readJson(2,"icon_url");
+		picboxD2.Load(picpath);
+		lblD2.Text = weather.readJson(2,"title");
+		//lblD2desc.Text = weather.readJson(2,"fcttext");
+		lblD2pop.Text = "Chance of precipitation: " + weather.readJson(2,"pop");
+		
+		picpath = weather.readJson(3,"icon_url");
+		picboxN2.Load(picpath);
+		lblN2.Text = weather.readJson(3,"title");
+		//lblN2desc.Text = weather.readJson(3,"fcttext");
+		lblN2pop.Text = "Chance of precipitation: " + weather.readJson(3,"pop");
+		
+		
+		
+		picpath = weather.readJson(4,"icon_url");
+		picboxD3.Load(picpath);
+		lblD3.Text = weather.readJson(4,"title");
+		//lblD3desc.Text = weather.readJson(4,"fcttext");
+		lblD3pop.Text = "Chance of precipitation: " + weather.readJson(4,"pop");
+		
+		picpath = weather.readJson(5,"icon_url");
+		picboxN3.Load(picpath);
+		lblN3.Text = weather.readJson(5,"title");
+		//lblN3desc.Text = weather.readJson(5,"fcttext");
+		lblN3pop.Text = "Chance of precipitation: " + weather.readJson(5,"pop");
+		
+		
+		
+		picpath = weather.readJson(6,"icon_url");
+		picboxD4.Load(picpath);
+		lblD4.Text = weather.readJson(6,"title");
+		//lblD4desc.Text = weather.readJson(6,"fcttext");
+		lblD4pop.Text = "Chance of precipitation: " + weather.readJson(6,"pop");
+		
+		picpath = weather.readJson(7,"icon_url");
+		picboxN4.Load(picpath);
+		lblN4.Text = weather.readJson(7,"title");
+		//lblN4desc.Text = weather.readJson(7,"fcttext");
+		lblN4pop.Text = "Chance of precipitation: " + weather.readJson(7,"pop");
+		
+		
+
+		weather = null;
+		/*
 		string xUrl = "http://api.wunderground.com/api/8390d409d9f2d532/forecast/q/FL/Tallahassee.xml";
 		XmlDocument xInfo = new XmlDocument();
 		xInfo.Load(xUrl);
@@ -184,10 +255,10 @@ public partial class MainForm
 	}
 	void GMapControlLoad(object sender, EventArgs e)
 	{
-		gMapControl.SetPositionByKeywords("USA");
+		gMap.SetPositionByKeywords("USA");
 		GMapProvider provider = GMapProviders.OpenCycleMap;
-		gMapControl.MapProvider  = provider;
-		gMapControl.OnPositionChanged += new PositionChanged(MainMap_OnPositionChanged);
+		gMap.MapProvider  = provider;
+		gMap.OnPositionChanged += new PositionChanged(MainMap_OnPositionChanged);
 		
 	}
 	
@@ -203,27 +274,36 @@ public partial class MainForm
 		var request = WebRequest.Create("http://api.wunderground.com/api/8390d409d9f2d532/forecast/q/FL/Tallahassee.json");
 		    request.ContentType = "application/json";
 		var response = (HttpWebResponse) request.GetResponse();
-		var textjson = "";
 
 			using (var sr = new StreamReader(response.GetResponseStream()))
 				{
-    			textjson = sr.ReadToEnd();
+    			Globals.textjson = sr.ReadToEnd();
 				}
-			
-            JObject o = JObject.Parse(textjson);
-            Debug.Print("forecast: " +o["forecast"]["txt_forecast"]["forecastday"][0]);
+            //JObject o = JObject.Parse(textjson);
+            //Debug.Print("forecast: " +o["forecast"]["txt_forecast"]["forecastday"][0]);
 			
 	
 	}
 	void Button3Click(object sender, EventArgs e)
 	{
 		forecast4 weather = new forecast4();
-		Debug.Print(weather.readJson("icon_url"));
+		//Debug.Print(weather.readJson("icon_url"));
+		weather = null;
 	}
+	void GMapLoad(object sender, EventArgs e)
+	{
+		gMap.SetPositionByKeywords("USA");
+		GMapProvider provider = GMapProviders.OpenCycleMap;
+		gMap.MapProvider  = provider;
+		gMap.OnPositionChanged += new PositionChanged(MainMap_OnPositionChanged);
+		
+	}
+
+	
 	
 }
 
-class	forecast4{
+public class forecast4{
 	
 	//forecast
 	public int period { get; set; }
@@ -233,19 +313,19 @@ class	forecast4{
 	public string fcstText { get; set; }
 	public int precipChance { get; set; }
 	
-	public string readJson(string input){
-		var request = WebRequest.Create("http://api.wunderground.com/api/8390d409d9f2d532/forecast/q/FL/Tallahassee.json");
-		    request.ContentType = "application/json";
-		var response = (HttpWebResponse) request.GetResponse();
-		var textjson = "";
+	public string readJson(int num, string input){
+		//var request = WebRequest.Create("http://api.wunderground.com/api/8390d409d9f2d532/forecast/q/FL/Tallahassee.json");
+		  //  request.ContentType = "application/json";
+		//var response = (HttpWebResponse) request.GetResponse();
+		//var textjson = "";
 
-			using (var sr = new StreamReader(response.GetResponseStream()))
-				{
-    			textjson = sr.ReadToEnd();
-				}
+			//using (var sr = new StreamReader(response.GetResponseStream()))
+				//{
+    			//textjson = sr.ReadToEnd();
+				//}
 			
-            JObject o = JObject.Parse(textjson);
-            return Convert.ToString(o["forecast"]["txt_forecast"]["forecastday"][0][input]);
+            JObject o = JObject.Parse(Globals.textjson);
+            return Convert.ToString(o["forecast"]["txt_forecast"]["forecastday"][num][input]);
 			
 	
 	}
