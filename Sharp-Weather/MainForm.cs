@@ -36,7 +36,8 @@ using System.Xml;
 
 internal static class Globals   
 {   
-    public static string textjson = "";   
+    public static string forecast4 = "";
+    public static string forecast10 = "";
        
 }  
 
@@ -48,7 +49,7 @@ public partial class MainForm
 	string labeltxt;
 	string periodtxt;
 	string icontxt;
-	static string textjson;
+	
 	public MainForm()
 	{
 		//SizeChanged += Redrawmap;
@@ -57,6 +58,7 @@ public partial class MainForm
 		readJson();
 		Map();
 		Forecast4day();
+		forecast10day();
 
 	}
 
@@ -89,16 +91,16 @@ public partial class MainForm
 	public void Forecast4day()
 	{	
 		//JObject o = JObject.Parse(textjson);
-		forecast4 weather = new forecast4();
+		forecast4 weather = new forecast4(0);
 		//Debug.Print(weather.readJson("icon_url"));
 		string picpath = null;
 		
 		
 		picpath = weather.readJson(0,"icon_url");
 		picboxD1.Load(picpath);
-		lblD1.Text = weather.readJson(0,"title");
-		//lblD1desc.Text = weather.readJson(0,"fcttext");
-		lblD1pop.Text = "Chance of precipitation: " + weather.readJson(0,"pop");
+		lblD1.Text = weather.title;
+		//lblD1desc.Text = weather.fcstText;
+		lblD1pop.Text = "Chance of precipitation: " + weather.precipChance;
 		
 		picpath = weather.readJson(1,"icon_url");
 		picboxN1.Load(picpath);
@@ -253,14 +255,9 @@ public partial class MainForm
 		day10.Visible = true;
 */
 	}
-	void GMapControlLoad(object sender, EventArgs e)
-	{
-		gMap.SetPositionByKeywords("USA");
-		GMapProvider provider = GMapProviders.OpenCycleMap;
-		gMap.MapProvider  = provider;
-		gMap.OnPositionChanged += new PositionChanged(MainMap_OnPositionChanged);
-		
-	}
+	
+	
+
 	
 	void MainMap_OnPositionChanged(PointLatLng point)
       {
@@ -277,19 +274,23 @@ public partial class MainForm
 
 			using (var sr = new StreamReader(response.GetResponseStream()))
 				{
-    			Globals.textjson = sr.ReadToEnd();
+    			Globals.forecast4 = sr.ReadToEnd();
+				}
+			
+		request = WebRequest.Create("http://api.wunderground.com/api/8390d409d9f2d532/forecast10day/q/FL/Tallahassee.json");
+		request.ContentType = "application/json";
+		response = (HttpWebResponse) request.GetResponse();
+
+			using (var sr = new StreamReader(response.GetResponseStream()))
+				{
+    			Globals.forecast10 = sr.ReadToEnd();
 				}
             //JObject o = JObject.Parse(textjson);
             //Debug.Print("forecast: " +o["forecast"]["txt_forecast"]["forecastday"][0]);
 			
 	
 	}
-	void Button3Click(object sender, EventArgs e)
-	{
-		forecast4 weather = new forecast4();
-		//Debug.Print(weather.readJson("icon_url"));
-		weather = null;
-	}
+
 	void GMapLoad(object sender, EventArgs e)
 	{
 		gMap.SetPositionByKeywords("USA");
@@ -299,35 +300,40 @@ public partial class MainForm
 		
 	}
 
-	
-	
+	void forecast10day() {
+		forecast10 weather10 = new forecast10();
+		forecast4  weather4 = new forecast4(0);
+		
+		day1Pic.Load(weather10.readJson(0, "icon_url"));
+		day1Desc.Text = weather10.readJson(0,"conditions");
+		day1Label.Text = weather10.readJson(0,"date.weekday");
+		Debug.Print(Convert.ToString(weather4.period));
+		Debug.Print(Convert.ToString(weather4.iconURL));
 }
 
-public class forecast4{
-	
+	public class forecast4 {
+	JObject o = JObject.Parse(Globals.forecast4);
 	//forecast
-	public int period { get; set; }
+	public int period {get;	set;}
 	public string icon { get; set; }
-	public Uri iconURL { get; set; }
+	public String iconURL {  get; set;	}
 	public string title { get; set; }
 	public string fcstText { get; set; }
 	public int precipChance { get; set; }
 	
 	public string readJson(int num, string input){
-		//var request = WebRequest.Create("http://api.wunderground.com/api/8390d409d9f2d532/forecast/q/FL/Tallahassee.json");
-		  //  request.ContentType = "application/json";
-		//var response = (HttpWebResponse) request.GetResponse();
-		//var textjson = "";
-
-			//using (var sr = new StreamReader(response.GetResponseStream()))
-				//{
-    			//textjson = sr.ReadToEnd();
-				//}
-			
-            JObject o = JObject.Parse(Globals.textjson);
+	        JObject o = JObject.Parse(Globals.forecast4);
             return Convert.ToString(o["forecast"]["txt_forecast"]["forecastday"][num][input]);
-			
+	}
 	
+	public forecast4(int num) {
+		period = Convert.ToInt16 (o["forecast"]["txt_forecast"]["forecastday"][num]["period"]);
+		iconURL = Convert.ToString (o["forecast"]["txt_forecast"]["forecastday"][num]["iconURL"]);
+		title = Convert.ToString (o["forecast"]["txt_forecast"]["forecastday"][num]["title"]);
+		fcstText = Convert.ToString (o["forecast"]["txt_forecast"]["forecastday"][num]["fcttext"]);
+		precipChance = Convert.ToInt16 (o["forecast"]["txt_forecast"]["forecastday"][num]["pop"]);
+		
+	}
 	}
 }
 
@@ -414,3 +420,11 @@ class currentConditions{
     public Uri  ob_url { get; set; }
 
 }
+
+public class forecast10 {
+	
+	public string readJson(int num, string input){
+	        JObject o = JObject.Parse(Globals.forecast10);
+            return Convert.ToString(o["forecast"]["simpleforecast"]["forecastday"][num][input]);
+	}
+}	

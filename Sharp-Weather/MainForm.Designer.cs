@@ -74,8 +74,6 @@ partial class MainForm : System.Windows.Forms.Form
 		this.gMap = new GMap.NET.WindowsForms.GMapControl();
 		this.panel16 = new System.Windows.Forms.Panel();
 		this.TabPage3 = new System.Windows.Forms.TabPage();
-		this.tabPage2 = new System.Windows.Forms.TabPage();
-		this.tabPage4 = new System.Windows.Forms.TabPage();
 		this.panel15 = new System.Windows.Forms.Panel();
 		this.panel8 = new System.Windows.Forms.Panel();
 		this.night10Pic = new System.Windows.Forms.PictureBox();
@@ -167,8 +165,8 @@ partial class MainForm : System.Windows.Forms.Form
 		this.day1Desc = new System.Windows.Forms.Label();
 		this.night1Label = new System.Windows.Forms.Label();
 		this.day1Label = new System.Windows.Forms.Label();
+		this.tabPage2 = new System.Windows.Forms.TabPage();
 		this.label1 = new System.Windows.Forms.Label();
-		this.button3 = new System.Windows.Forms.Button();
 		this.panel1.SuspendLayout();
 		((System.ComponentModel.ISupportInitialize)(this.picboxN4)).BeginInit();
 		((System.ComponentModel.ISupportInitialize)(this.picboxN3)).BeginInit();
@@ -181,8 +179,7 @@ partial class MainForm : System.Windows.Forms.Form
 		this.tabControl1.SuspendLayout();
 		this.tabPage1.SuspendLayout();
 		this.panel16.SuspendLayout();
-		this.tabPage2.SuspendLayout();
-		this.tabPage4.SuspendLayout();
+		this.TabPage3.SuspendLayout();
 		this.panel15.SuspendLayout();
 		this.panel8.SuspendLayout();
 		((System.ComponentModel.ISupportInitialize)(this.night10Pic)).BeginInit();
@@ -214,6 +211,7 @@ partial class MainForm : System.Windows.Forms.Form
 		this.panel5.SuspendLayout();
 		((System.ComponentModel.ISupportInitialize)(this.night1Pic)).BeginInit();
 		((System.ComponentModel.ISupportInitialize)(this.day1Pic)).BeginInit();
+		this.tabPage2.SuspendLayout();
 		this.SuspendLayout();
 		// 
 		// panel1
@@ -485,7 +483,6 @@ partial class MainForm : System.Windows.Forms.Form
 		this.tabControl1.Controls.Add(this.tabPage1);
 		this.tabControl1.Controls.Add(this.TabPage3);
 		this.tabControl1.Controls.Add(this.tabPage2);
-		this.tabControl1.Controls.Add(this.tabPage4);
 		this.tabControl1.Location = new System.Drawing.Point(12, 12);
 		this.tabControl1.Name = "tabControl1";
 		this.tabControl1.SelectedIndex = 0;
@@ -506,7 +503,8 @@ partial class MainForm : System.Windows.Forms.Form
 		// 
 		// gMap
 		// 
-		this.gMap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+		this.gMap.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			| System.Windows.Forms.AnchorStyles.Left) 
 			| System.Windows.Forms.AnchorStyles.Right)));
 		this.gMap.Bearing = 0F;
 		this.gMap.CanDragMap = true;
@@ -545,34 +543,13 @@ partial class MainForm : System.Windows.Forms.Form
 		// 
 		// TabPage3
 		// 
+		this.TabPage3.Controls.Add(this.panel15);
 		this.TabPage3.Location = new System.Drawing.Point(4, 22);
 		this.TabPage3.Name = "TabPage3";
 		this.TabPage3.Size = new System.Drawing.Size(1003, 601);
 		this.TabPage3.TabIndex = 2;
 		this.TabPage3.Text = "10 Day Forecast";
 		this.TabPage3.UseVisualStyleBackColor = true;
-		// 
-		// tabPage2
-		// 
-		this.tabPage2.Controls.Add(this.WEBmapbrowser);
-		this.tabPage2.Location = new System.Drawing.Point(4, 22);
-		this.tabPage2.Name = "tabPage2";
-		this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-		this.tabPage2.Size = new System.Drawing.Size(1003, 601);
-		this.tabPage2.TabIndex = 1;
-		this.tabPage2.Text = "Radar Map";
-		this.tabPage2.UseVisualStyleBackColor = true;
-		// 
-		// tabPage4
-		// 
-		this.tabPage4.Controls.Add(this.panel15);
-		this.tabPage4.Location = new System.Drawing.Point(4, 22);
-		this.tabPage4.Name = "tabPage4";
-		this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-		this.tabPage4.Size = new System.Drawing.Size(1003, 601);
-		this.tabPage4.TabIndex = 3;
-		this.tabPage4.Text = "tabPage4";
-		this.tabPage4.UseVisualStyleBackColor = true;
 		// 
 		// panel15
 		// 
@@ -588,10 +565,10 @@ partial class MainForm : System.Windows.Forms.Form
 		this.panel15.Controls.Add(this.panel7);
 		this.panel15.Controls.Add(this.panel6);
 		this.panel15.Controls.Add(this.panel5);
-		this.panel15.Location = new System.Drawing.Point(6, 6);
+		this.panel15.Location = new System.Drawing.Point(3, 3);
 		this.panel15.Name = "panel15";
-		this.panel15.Size = new System.Drawing.Size(898, 400);
-		this.panel15.TabIndex = 1;
+		this.panel15.Size = new System.Drawing.Size(996, 400);
+		this.panel15.TabIndex = 2;
 		// 
 		// panel8
 		// 
@@ -1464,6 +1441,17 @@ partial class MainForm : System.Windows.Forms.Form
 		this.day1Label.TabIndex = 0;
 		this.day1Label.Text = "Day1";
 		// 
+		// tabPage2
+		// 
+		this.tabPage2.Controls.Add(this.WEBmapbrowser);
+		this.tabPage2.Location = new System.Drawing.Point(4, 22);
+		this.tabPage2.Name = "tabPage2";
+		this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+		this.tabPage2.Size = new System.Drawing.Size(1003, 601);
+		this.tabPage2.TabIndex = 1;
+		this.tabPage2.Text = "Radar Map";
+		this.tabPage2.UseVisualStyleBackColor = true;
+		// 
 		// label1
 		// 
 		this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -1473,16 +1461,6 @@ partial class MainForm : System.Windows.Forms.Form
 		this.label1.TabIndex = 6;
 		this.label1.Text = "label1";
 		// 
-		// button3
-		// 
-		this.button3.Location = new System.Drawing.Point(657, 3);
-		this.button3.Name = "button3";
-		this.button3.Size = new System.Drawing.Size(69, 25);
-		this.button3.TabIndex = 7;
-		this.button3.Text = "button3";
-		this.button3.UseVisualStyleBackColor = true;
-		this.button3.Click += new System.EventHandler(this.Button3Click);
-		// 
 		// MainForm
 		// 
 		this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1490,7 +1468,6 @@ partial class MainForm : System.Windows.Forms.Form
 		this.AutoScroll = true;
 		this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 		this.ClientSize = new System.Drawing.Size(1027, 676);
-		this.Controls.Add(this.button3);
 		this.Controls.Add(this.label1);
 		this.Controls.Add(this.tabControl1);
 		this.Name = "MainForm";
@@ -1508,8 +1485,7 @@ partial class MainForm : System.Windows.Forms.Form
 		this.tabControl1.ResumeLayout(false);
 		this.tabPage1.ResumeLayout(false);
 		this.panel16.ResumeLayout(false);
-		this.tabPage2.ResumeLayout(false);
-		this.tabPage4.ResumeLayout(false);
+		this.TabPage3.ResumeLayout(false);
 		this.panel15.ResumeLayout(false);
 		this.panel8.ResumeLayout(false);
 		this.panel8.PerformLayout();
@@ -1551,6 +1527,7 @@ partial class MainForm : System.Windows.Forms.Form
 		this.panel5.PerformLayout();
 		((System.ComponentModel.ISupportInitialize)(this.night1Pic)).EndInit();
 		((System.ComponentModel.ISupportInitialize)(this.day1Pic)).EndInit();
+		this.tabPage2.ResumeLayout(false);
 		this.ResumeLayout(false);
 
 	}
@@ -1586,8 +1563,6 @@ partial class MainForm : System.Windows.Forms.Form
 	internal TabPage TabPage3;
 	private GMap.NET.WindowsForms.GMapControl gMap;
 	private System.Windows.Forms.Label label1;
-	private System.Windows.Forms.Button button3;
-	private System.Windows.Forms.TabPage tabPage4;
 	private System.Windows.Forms.Panel panel5;
 	private System.Windows.Forms.PictureBox night1Pic;
 	private System.Windows.Forms.PictureBox day1Pic;
