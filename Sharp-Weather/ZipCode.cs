@@ -13,22 +13,41 @@ namespace SharpWeather
         public zipcode(string zipstring)
         {
 
-            string xUrl = "http://www.webservicex.net/uszip.asmx/GetInfoByCity?USCity=" + zipstring;
+            var request = WebRequest.Create("http://autocomplete.wunderground.com/aq?query=" + zipstring);
+        request.ContentType = "application/json";
+        var response = (HttpWebResponse)request.GetResponse();
+
+        using (var sr = new StreamReader(response.GetResponseStream()))
+        {
+            Globals.zipCity = sr.ReadToEnd();
+        }
+        JObject o = JObject.Parse(Globals.zipCity);
+        JArray items = (JArray)o["RESULTS"];
+		int length = items.Count;
+		
+		for (int i = 0; i < items.Count; i++)
+{			
+			//var item = (JObject)items[i];
+			Debug.Print( (string)o["RESULTS"][i]["name"]);
+}
+		
+		
+
+
+        
+		
+
+				
+
+        
+			
+          /*  string xUrl = "http://www.webservicex.net/uszip.asmx/GetInfoByCity?USCity=" + zipstring;
             XmlDocument doc = new XmlDocument();
             doc.Load(xUrl);
             XmlNode node = doc.DocumentElement.SelectSingleNode("/NewDataSet/Table/ZIP");
-
-            
-            //XmlNodeList nodes1 = default(XmlNodeList);
-            //XmlNode node = xInfo.DocumentElement.SelectSingleNode("/NewDataSet/Table/");
-            //nodes1 = xInfo.SelectNodes();
-            //lblD1.Text = nodes1.Item(3).InnerText;
-            //lblD1desc.Text = nodes1.Item(4).InnerText;
-            //lblD1pop.Text = "Chance of precipitation: " + nodes1.Item(6).InnerText;
-
-
-                Debug.Print(node.InnerText);
-            }
+            Globals.zipCity = node.InnerText;                
+          */
+  }
             
 
 
