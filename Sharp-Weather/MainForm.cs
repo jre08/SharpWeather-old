@@ -290,7 +290,27 @@ public partial class MainForm
 			
 	
 	}
+public void zipcode(string zipstring)
+        {
+		
+		var request = WebRequest.Create("http://autocomplete.wunderground.com/aq?query=" + zipstring);
+        request.ContentType = "application/json";
+        var response = (HttpWebResponse)request.GetResponse();
 
+        using (var sr = new StreamReader(response.GetResponseStream()))
+        {
+            Globals.zipCity = sr.ReadToEnd();
+        }
+        JObject o = JObject.Parse(Globals.zipCity);
+        JArray items = (JArray)o["RESULTS"];
+		int length = items.Count;
+		
+		for (int i = 0; i < items.Count; i++)
+{			
+			//var item = (JObject)items[i];
+			zipBox.Items.Add((string)o["RESULTS"][i]["name"]);
+}
+}
 	void GMapLoad(object sender, EventArgs e)
 	{
 		gMap.SetPositionByKeywords("USA");
